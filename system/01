@@ -1,0 +1,1 @@
+le fichier se trouve dans /etc/debian_version, un cat sur le fichier suffira a afficher la version utilise.
