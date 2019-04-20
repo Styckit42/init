@@ -1,2 +1,4 @@
-#commande : host 10.11.7.14 (ifconfig en0 inet)
-14.7.11.10.in-addr.arpa domain name pointer e1r7p14.42.fr.
+e1r7p18.42.fr.
+
+#commande pour trouver :
+#host `ifconfig en0 | grep -w inet | awk '{print$2}'` | awk '{print$5}'

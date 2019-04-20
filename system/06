@@ -1,1 +1,3 @@
-sudo systemctl restart ssh.service
+sudo systemctl restart ssh
+
+#on peut verifier que c est bien restart en regardant l uptime avec un "sudo systemctl status ssh"
