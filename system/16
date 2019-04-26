@@ -1,0 +1,5 @@
+Cron est un programme disponible sur les systèmes de type Unix (Linux, Mac Osx ...) permettant de planifier des taches régulières. Il est en effet intéressant que les tâches habituelles soient réalisées automatiquement par le système plutôt que d’avoir à les lancer manuellement en tant qu’utilisateur.
+
+Cron est un démon, il tourne donc en tâche de fond du système. Il peut donc être arrêté, démarré ou redémarrer avec la commande :
+
+/etc/init.d/cron start|stop|restart
