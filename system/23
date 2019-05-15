@@ -1,0 +1,2 @@
+il faut tout simplement faire la commande "su $(username)" puis rentrer le mot de passe de ce user.
+un whoami permettra de verifier quel est l utilisateur actif sur le terminal

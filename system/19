@@ -1,0 +1,16 @@
+console-setup.sh
+cron
+dbus
+hwclock.sh
+irqbalance
+keyboard-setup.sh
+kmod
+networking
+procps
+rsync
+rsyslog
+ssh
+udev
+
+# trouve avec la commande "for i in `find /etc/rc*.d -name S*`; do basename $i | sed -r 's/^S[0-9]+//'; done | sort | uniq"
+#ls /etc/rc*.d permet de les lister plus simplement, ce qui commence par la lettre K sera kill, et ce qui commence par la lettre S sera start

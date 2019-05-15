@@ -1,0 +1,3 @@
+sudo systemctl start ssh
+
+#verifier l etat du service avec "sudo systemctl status ssh"
