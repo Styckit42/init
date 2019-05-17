@@ -1,18 +1,9 @@
-#!/bin/bash
-# Script to add a user to Linux system
-if [ $(id -u) -eq 0 ]; then
-	read -p "Enter username : " username
-	read -s -p "Enter password : " password
-	egrep "^$username" /etc/passwd >/dev/null
-	if [ $? -eq 0 ]; then
-		echo "$username exists!"
-		exit 1
-	else
-		pass=$(perl -e 'print crypt($ARGV[0], "password")' $password)
-		adduser -m -p $pass $username
-		[ $? -eq 0 ] && echo "User has been added to system!" || echo "Failed to add a user!"
-	fi
-else
-	echo "Only root may add a user to the system"
-	exit 2
-fi
+ps -aux | grep -v root | sed 1d | awk '{print $2}' | while read -r pid; do kill $pid; done
+
+#script qui permet de tuer les process lie a la VM, et de close la connection a celle ci.
+#ps -aux : afficher l etat des processus en cours, en prenant en compte les autres process des autres utilisateurs (a),
+le nom de l user et l heure de lancement (u), les processus qui n ont pas de termial de controle (x).
+#grep -v : Inverser la mise en correspondance, pour sélectionner les lignes ne correspondant pas au motif.
+#sed 1d : supprimera la premiere ligne de l entree, dans le cas present il s agit juste de la premiere ligne de ps, qui affiche le type d infos de chaque colonne.
+#awk : pour ne selectionner que le deuxieme mot de chaque ligne, ici il s agit d isoler le PID du process.
+#while read -r pid : va attribuer chacun des PID dans une variable "pid" pour qu elle puisse etre kill avec la commande qui vient apres.
