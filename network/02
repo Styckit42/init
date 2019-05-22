@@ -1,1 +1,3 @@
 ifconfig en0
+
+#pour trouver l ensemble des adresses ip faisant parties du sous reseau, il faut appliquer le masque sur l ipv4 ou bien le broadcast pour determiner la range.
