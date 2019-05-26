@@ -2,5 +2,7 @@
 read -p "Wish user you want to remove ? " username
 if [ `getent passwd $username | wc -l` = "1" ]
 	then
-		userdel $username
+		sudo pkill -u $username
+		sudo crontab -r -u $username
+		userdel -r $username
 fi

@@ -1,3 +1,4 @@
-ifconfig en0
+ifconfig en0 | grep broadcast | awk '{print$6}'
+arp -a | grep "^e"
 
 #pour trouver l ensemble des adresses ip faisant parties du sous reseau, il faut appliquer le masque sur l ipv4 ou bien le broadcast pour determiner la range.
